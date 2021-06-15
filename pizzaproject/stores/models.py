@@ -3,6 +3,7 @@ from django.core.validators import RegexValidator
 
 
 class Pizzeria(models.Model):
+    objects = models.Manager()
     pizzeria_name = models.CharField(max_length=200, blank=False)
     street = models.CharField(max_length=400, blank=True)
     city = models.CharField(max_length=400, blank=True)
